@@ -11,16 +11,26 @@ namespace ExamenIndividual
         protected string nombre;
         protected string color;
         protected string material;
+        protected string tamanio;
         protected string peso;
         protected float precio;
-        
 
-        public virtual string GetDatos()
+
+
+        public string GetDatosArcilla()
         {
-            return "";
-        } 
+            return $"el objeto {nombre}, de peso {peso}, es de tamaño {tamanio} y es de color {color}.";
+        }
+        public string GetDatosTela()
+        {
+            return $"el objeto {nombre}, de tamaño {tamanio} está compuesto por {material} y es de color {color}.";
+        }
 
-        public virtual float GetPrecio()
+        public float GetPrecioArcilla()
+        {
+            return precio;
+        }
+        public float GetPrecioTela()
         {
             return precio;
         }

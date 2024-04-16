@@ -6,28 +6,24 @@ using System.Threading.Tasks;
 
 namespace ExamenIndividual
 {
-    internal class Tela:Productos
+    internal class Tela : Productos
     {
         private string nom;
         private string col;
         private string mat;
+        private string tam;
+        private string pes;
         private float pre;
 
-        public Tela(string nom, string col, string mat, float pre)
+        public Tela(string nom, string col, string mat, string tam, string pes, float pre)
         {
             this.nom = nombre;
             this.col = color;
             this.mat = material;
+            this.tam = tamanio;
+            this.pes = peso;
             this.pre = precio;
         }
-        public override string GetDatos()
-        {
-            return $"el objeto {nom} es de color {col} y está compuesto por {mat}.";
-        }
-
-        public override float GetPrecio()
-        {
-            return pre;
-        }
+        
     }
 }
