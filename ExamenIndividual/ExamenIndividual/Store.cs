@@ -86,14 +86,14 @@ namespace ExamenIndividual
                     case "1":
                         foreach (Productos producto in productos)
                         {
-                            Console.WriteLine(producto.GetDatosArcilla());
+                            Console.WriteLine(producto.GetDatos());
                         }
                         continueFlag = false;
                         break;
                     case "2":
                         foreach (Productos producto in productos)
                         {
-                            Console.WriteLine(producto.GetDatosTela());
+                            Console.WriteLine(producto.GetDatos());
                         }
                         continueFlag = false;
                         break;
@@ -119,7 +119,7 @@ namespace ExamenIndividual
                     case "1":
                         for (int i = 0; i < productos.Count; i++)
                         {
-                            Console.WriteLine($"{i}. {productos[i].GetDatosArcilla()}");
+                            Console.WriteLine($"{i}. {productos[i].GetDatos()}");
                         }
                         int index = int.Parse(Console.ReadLine());
                         if (index >= 0 && index < productos.Count)
@@ -136,7 +136,7 @@ namespace ExamenIndividual
                     case "2":
                         for (int i = 0; i < productos.Count; i++)
                         {
-                            Console.WriteLine($"{i}. {productos[i].GetDatosTela()}");
+                            Console.WriteLine($"{i}. {productos[i].GetDatos()}");
                         }
                         int inx = int.Parse(Console.ReadLine());
                         if (inx >= 0 && inx < productos.Count)

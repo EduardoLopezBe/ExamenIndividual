@@ -24,5 +24,14 @@ namespace ExamenIndividual
             this.pes = peso;
             this.pre = precio;
         }
+        public override string GetDatos()
+        {
+            return $"el objeto {nom}, de peso {pes}, es de tamaño {tam} y es de color {col}.";
+        }
+
+        public override float GetPrecio()
+        {
+            return pre;
+        }
     }
 }
