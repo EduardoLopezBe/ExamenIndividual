@@ -14,16 +14,16 @@ namespace ExamenIndividual
         protected string tamanio;
         protected string peso;
         protected float precio;
-
+        Arcilla arcilla = new Arcilla();
 
 
         public string GetDatosArcilla()
         {
-            return $"el objeto {nombre}, de peso {peso}, es de tamaño {tamanio} y es de color {color}.";
+            return $"el objeto {arcilla.nom}, de peso {pes}, es de tamaño {tam} y es de color {col}.";
         }
         public string GetDatosTela()
         {
-            return $"el objeto {nombre}, de tamaño {tamanio} está compuesto por {material} y es de color {color}.";
+            return $"el objeto {nom}, de tamaño {tam} está compuesto por {mat} y es de color {col}.";
         }
 
         public float GetPrecioArcilla()

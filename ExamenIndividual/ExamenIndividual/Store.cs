@@ -131,10 +131,6 @@ namespace ExamenIndividual
                         {
                             Console.WriteLine("El producto no existe");
                         }
-                        foreach (Productos producto in productos)
-                        {
-                            Console.WriteLine(producto.GetDatosArcilla());
-                        }
                         continueFlag = false;
                         break;
                     case "2":
@@ -142,19 +138,15 @@ namespace ExamenIndividual
                         {
                             Console.WriteLine($"{i}. {productos[i].GetDatosTela()}");
                         }
-                        int index = int.Parse(Console.ReadLine());
-                        if (index >= 0 && index < productos.Count)
+                        int inx = int.Parse(Console.ReadLine());
+                        if (inx >= 0 && inx < productos.Count)
                         {
                             continueFlag = false;
-                            productos.RemoveAt(index);
+                            productos.RemoveAt(inx);
                         }
                         else
                         {
                             Console.WriteLine("El producto no existe");
-                        }
-                        foreach (Productos producto in productos)
-                        {
-                            Console.WriteLine(producto.GetDatosTela());
                         }
                         continueFlag = false;
                         break;
