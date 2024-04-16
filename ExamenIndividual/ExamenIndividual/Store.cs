@@ -8,10 +8,14 @@ namespace ExamenIndividual
 {
     internal class Store
     {
-        private List<Productos> productos;
+        //private List<Productos> productos;
+        private List<Arcilla> arcillas;
+        private List<Tela> telas;
         public Store()
         {
-            productos = new List<Productos>();
+            //productos = new List<Productos>();
+            arcillas = new List<Arcilla>();
+            telas = new List<Tela>();
         }
         public void Execute()
         {
@@ -84,16 +88,16 @@ namespace ExamenIndividual
                 switch (option)
                 {
                     case "1":
-                        foreach (Productos producto in productos)
+                        foreach (Arcilla arcilla in arcillas)
                         {
-                            Console.WriteLine(producto.GetDatos());
+                            Console.WriteLine(arcilla.GetDatos());
                         }
                         continueFlag = false;
                         break;
                     case "2":
-                        foreach (Productos producto in productos)
+                        foreach (Tela tela in telas)
                         {
-                            Console.WriteLine(producto.GetDatos());
+                            Console.WriteLine(tela.GetDatos());
                         }
                         continueFlag = false;
                         break;
@@ -117,36 +121,42 @@ namespace ExamenIndividual
                 switch (option)
                 {
                     case "1":
-                        for (int i = 0; i < productos.Count; i++)
+                        foreach (Arcilla arcilla in arcillas)
                         {
-                            Console.WriteLine($"{i}. {productos[i].GetDatos()}");
-                        }
-                        int index = int.Parse(Console.ReadLine());
-                        if (index >= 0 && index < productos.Count)
-                        {
-                            continueFlag = false;
-                            productos.RemoveAt(index);
-                        }
-                        else
-                        {
-                            Console.WriteLine("El producto no existe");
+                            for (int i = 0; i < arcillas.Count; i++)
+                            {
+                                Console.WriteLine($"{i}. {arcillas[i].GetDatos()}");
+                            }
+                            int index = int.Parse(Console.ReadLine());
+                            if (index >= 0 && index < arcillas.Count)
+                            {
+                                continueFlag = false;
+                                arcillas.RemoveAt(index);
+                            }
+                            else
+                            {
+                                Console.WriteLine("El producto no existe");
+                            }
                         }
                         continueFlag = false;
                         break;
                     case "2":
-                        for (int i = 0; i < productos.Count; i++)
+                        foreach (Tela tela in telas)
                         {
-                            Console.WriteLine($"{i}. {productos[i].GetDatos()}");
-                        }
-                        int inx = int.Parse(Console.ReadLine());
-                        if (inx >= 0 && inx < productos.Count)
-                        {
-                            continueFlag = false;
-                            productos.RemoveAt(inx);
-                        }
-                        else
-                        {
-                            Console.WriteLine("El producto no existe");
+                            for (int i = 0; i < telas.Count; i++)
+                            {
+                                Console.WriteLine($"{i}. {telas[i].GetDatos()}");
+                            }
+                            int inx = int.Parse(Console.ReadLine());
+                            if (inx >= 0 && inx < telas.Count)
+                            {
+                                continueFlag = false;
+                                telas.RemoveAt(inx);
+                            }
+                            else
+                            {
+                                Console.WriteLine("El producto no existe");
+                            }
                         }
                         continueFlag = false;
                         break;
@@ -161,16 +171,16 @@ namespace ExamenIndividual
         private void AgregarArcilla()
         {
             
-            productos.Add(new Arcilla("Maceta", "Gris","", "Pequena", "Ligera", 5));
-            productos.Add(new Arcilla("Cacerola", "Azul", "", "Mediana", "Regular", 20));
+            arcillas.Add(new Arcilla("Maceta", "Gris","", "Pequena", "Ligera", 5));
+            arcillas.Add(new Arcilla("Cacerola", "Azul", "", "Mediana", "Regular", 20));
             
         }
 
         private void AgregarTela()
         {
             
-            productos.Add(new Tela("Sabana", "Celeste", "Algodón", "Queen", "", 50));
-            productos.Add(new Tela("CubreAlmohada", "Amarillo", "Lana", "1.5 plazas", "", 30));
+            telas.Add(new Tela("Sabana", "Celeste", "Algodón", "Queen", "", 50));
+            telas.Add(new Tela("CubreAlmohada", "Amarillo", "Lana", "1.5 plazas", "", 30));
         }
     }
 }
