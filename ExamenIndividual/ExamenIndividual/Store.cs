@@ -8,12 +8,10 @@ namespace ExamenIndividual
 {
     internal class Store
     {
-        //private List<Productos> productos;
         private List<Arcilla> arcillas;
         private List<Tela> telas;
         public Store()
         {
-            //productos = new List<Productos>();
             arcillas = new List<Arcilla>();
             telas = new List<Tela>();
         }
@@ -90,14 +88,14 @@ namespace ExamenIndividual
                     case "1":
                         foreach (Arcilla arcilla in arcillas)
                         {
-                            Console.WriteLine(arcilla.GetDatos());
+                            Console.WriteLine(arcilla.GetDatosArcilla());
                         }
                         continueFlag = false;
                         break;
                     case "2":
                         foreach (Tela tela in telas)
                         {
-                            Console.WriteLine(tela.GetDatos());
+                            Console.WriteLine(tela.GetDatosTela());
                         }
                         continueFlag = false;
                         break;
@@ -121,42 +119,36 @@ namespace ExamenIndividual
                 switch (option)
                 {
                     case "1":
-                        foreach (Arcilla arcilla in arcillas)
+                        for (int i = 0; i < arcillas.Count; i++)
                         {
-                            for (int i = 0; i < arcillas.Count; i++)
-                            {
-                                Console.WriteLine($"{i}. {arcillas[i].GetDatos()}");
-                            }
-                            int index = int.Parse(Console.ReadLine());
-                            if (index >= 0 && index < arcillas.Count)
-                            {
-                                continueFlag = false;
-                                arcillas.RemoveAt(index);
-                            }
-                            else
-                            {
-                                Console.WriteLine("El producto no existe");
-                            }
+                        Console.WriteLine($"{i}. {arcillas[i].GetDatosArcilla()}");
+                        }
+                        int index = int.Parse(Console.ReadLine());
+                        if (index >= 0 && index < arcillas.Count)
+                        {
+                            continueFlag = false;
+                            arcillas.RemoveAt(index);
+                        }
+                        else
+                        {
+                            Console.WriteLine("El producto no existe");
                         }
                         continueFlag = false;
                         break;
                     case "2":
-                        foreach (Tela tela in telas)
+                        for (int i = 0; i < telas.Count; i++)
                         {
-                            for (int i = 0; i < telas.Count; i++)
-                            {
-                                Console.WriteLine($"{i}. {telas[i].GetDatos()}");
-                            }
-                            int inx = int.Parse(Console.ReadLine());
-                            if (inx >= 0 && inx < telas.Count)
-                            {
-                                continueFlag = false;
-                                telas.RemoveAt(inx);
-                            }
-                            else
-                            {
-                                Console.WriteLine("El producto no existe");
-                            }
+                            Console.WriteLine($"{i}. {telas[i].GetDatosTela()}");
+                        }
+                        int inx = int.Parse(Console.ReadLine());
+                        if (inx >= 0 && inx < telas.Count - 1)
+                        {
+                            continueFlag = false;
+                            telas.RemoveAt(inx);
+                        }
+                        else
+                        {
+                            Console.WriteLine("El producto no existe");
                         }
                         continueFlag = false;
                         break;

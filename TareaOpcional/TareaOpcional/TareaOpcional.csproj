@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{80ED7547-69DB-4B6A-84A2-4083366F0DDF}</ProjectGuid>
+    <ProjectGuid>{10AAC903-F653-4467-ABC3-2123BC216BC3}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ExamenIndividual</RootNamespace>
-    <AssemblyName>ExamenIndividual</AssemblyName>
+    <RootNamespace>TareaOpcional</RootNamespace>
+    <AssemblyName>TareaOpcional</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,11 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Arcilla.cs" />
+    <Compile Include="Planta.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Store.cs" />
-    <Compile Include="Tela.cs" />
+    <Compile Include="Granja.cs" />
+    <Compile Include="Sistema.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

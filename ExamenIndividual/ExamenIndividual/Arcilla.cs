@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ExamenIndividual
 {
-    internal class Arcilla:Productos
+    internal class Arcilla
     {
         private string nom;
         private string col;
@@ -17,19 +17,19 @@ namespace ExamenIndividual
 
         public Arcilla(string nom, string col, string mat, string tam, string pes, float pre)
         {
-            this.nom = nombre;
-            this.col = color;
-            this.mat = material;
-            this.tam = tamanio;
-            this.pes = peso;
-            this.pre = precio;
+            this.nom = nom;
+            this.col = col;
+            this.mat = mat;
+            this.tam = tam;
+            this.pes = pes;
+            this.pre = pre;
         }
-        public override string GetDatos()
+        public string GetDatosArcilla()
         {
             return $"el objeto {nom}, de peso {pes}, es de tamaño {tam} y es de color {col}.";
         }
 
-        public override float GetPrecio()
+        public float GetPrecioArcilla()
         {
             return pre;
         }
