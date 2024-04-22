@@ -8,10 +8,13 @@ namespace ExamenIndividual
 {
     internal class Program
     {
-        static void Main(string[] args)
-        {
-            Store store = new Store();
-            store.Execute();
-        }
+        
+            static void Main(string[] args)
+            {
+                Store tienda = new Store();
+                tienda.ElegirOpciones();
+                Console.WriteLine();
+            }
+        
     }
 }

@@ -6,32 +6,13 @@ using System.Threading.Tasks;
 
 namespace ExamenIndividual
 {
-    internal class Arcilla
+    internal class Arcilla:Productos
     {
-        private string nom;
-        private string col;
-        private string mat;
-        private string pes;
-        private string tam;
-        private float pre;
+        public float Peso { get; set; }
 
-        public Arcilla(string nom, string col, string mat, string tam, string pes, float pre)
+        public override string GetCaracteristicas()
         {
-            this.nom = nom;
-            this.col = col;
-            this.mat = mat;
-            this.tam = tam;
-            this.pes = pes;
-            this.pre = pre;
-        }
-        public string GetDatosArcilla()
-        {
-            return $"el objeto {nom}, de peso {pes}, es de tamaño {tam} y es de color {col}.";
-        }
-
-        public float GetPrecioArcilla()
-        {
-            return pre;
+            return "Nombre: " + Nombre + "Peso: " + "Color: " + Color + "Precio: " + Precio;
         }
     }
 }
